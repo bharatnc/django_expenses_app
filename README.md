@@ -7,9 +7,9 @@
 
 
 ## Current Features
-DONE Add expenses
-DONE Edit/modify expenses
-DONE Export Expenses in .XLS format
-DONE Export expenses in .CSV format
-DONE Restore deleted expenses from trash
-DONE Delete expenses permenantly
+DONE Add expenses <br>
+DONE Edit/modify expenses <br>
+DONE Export Expenses in .XLS format <br>
+DONE Export expenses in .CSV format <br>
+DONE Restore deleted expenses from trash <br>
+DONE Delete expenses permenantly <br>
