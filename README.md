@@ -46,7 +46,7 @@ Export custom elements <br>
 ##General directory Structure:
 
 
-expenses_app (main folder)<br>
+django_expenses_app (main folder)<br>
 	---- expenses (app) <br>
 	---- expenses_project (project) <br>
 	---- main (app) <br>
