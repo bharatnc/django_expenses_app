@@ -1,0 +1,57 @@
+{% load crispy_forms_tags %}
+
+<!DOCTYPE html>
+<html>
+<head>
+    {% include "expenses_templates/expenses_header.html" %}
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+    <title>details</title>
+</head>
+<body>
+
+<div class="jumbotron" style="border-radius: 6px">
+    <div class="container" style="padding-left :15px ; text align: justify; text-justify:auto;">
+        <div class="jumbotron" style="padding-left :15px ; text align: justify; text-justify:auto; background: ">
+            <div class="panel panel-default" style="padding-left :15px">
+                <div class="panel-heading">Click on Expense to Edit/Delete</div>
+                <div class="panel-body" style="padding-left :15px">
+                    <h1>{{ instance }}</h1>
+                    Select an expense to undo your delete
+                    {% for obj in querylistundo %}<br/>
+
+                        <!-- '{% url "detail" id=obj.id %}' -->
+                        <ul class="list-group">
+                            <li class="list-group-item"><a href=''>{{ obj.title }}</a><br/></li>
+                            <b><u>Category </u> -</b> {{ obj.category }}<br/>
+                            <b><u>Date </b>-</u>{{ obj.date }}<br/>
+                            <b><u>Description </b>-</u>{{ obj.description }}<br/>
+                            <b><u> id</b>-</u> {{ obj.id }}
+                        </ul>
+                    {% endfor %}
+                    <br>
+                    <br>
+                    <table>
+                        <td>
+                            <tr>
+                                <form action='/expenses/undone'>{% csrf_token %}
+                                    <input type='submit' value='Restore/Undo' class="btn btn-primary btn-lg"
+                                           style="margin-right: 20px"> </input></form>
+                            </tr>
+                            <tr>
+                                <form action='/expenses/deleteall'>{% csrf_token %}
+                                    <input type='submit' value='Delete Permanently' class="btn btn-primary btn-lg"
+                                           style=" margin-right: 10px"> </input></form>
+                            </tr>
+                        </td>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

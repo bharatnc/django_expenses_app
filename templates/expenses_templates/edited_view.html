@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    {% include "expenses_templates/expenses_header.html" %}
+    <title></title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+</head>
+<body>
+<div class="jumbotron" style="border-radius: 6px">
+    <div class="container" style="padding-left :15px ; text align: justify; text-justify:auto;">
+        <div class="jumbotron" style="padding-left :15px ; text align: justify; text-justify:auto; background: ">
+            <h1>{{ instance }} </h1>
+            {% for obj in querylist %}<br/>
+                <a href='/expenses/objects'>{{ obj.title }}</a><br/>
+                {{ obj.date }}<br/>
+                {{ obj.id }}<br/>
+
+            {% endfor %}
+            {{ instance.title }}<br/>
+            {{ instance.date }}<br/>
+        </div>
+    </div>
+</div>
+</body>
+</html>
