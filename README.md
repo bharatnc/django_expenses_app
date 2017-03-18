@@ -1,6 +1,6 @@
-##Django expenses application for mangaging your expenses.
+## Django expenses application for mangaging your expenses.
 
-##Requirements/Dependencies
+## Requirements/Dependencies
 
 1. Python pip
 2. Django version of 1.9 installed
@@ -8,14 +8,14 @@
 4. Django Queryset CSV v1.0.0 
 5. Python xlwt 1.2.0
 
-##Installing Requirements/Dependencies
+## Installing Requirements/Dependencies
 1. Python pip - Install Python pip using `sudo apt-get install python-pip`.
 2. Django v 1.9 - Install using `sudo pip install django==1.9`.
 3. Django crispy form - Install using `sudo pip install --upgrade django-crispy-forms`.
 4. Django Queryset CSV v 1.0.0 - Install using `sudo pip install django-queryset-csv`.
 5. Python xlwt 1.2.0 - Install using `sudo pip install xlwt`
 
-##Features
+## Features
 **Yes** Add expenses <br>
 **Yes** Edit/modify expenses <br>
 **Yes** Export Expenses in .XLS format <br>
@@ -29,7 +29,7 @@ Restore Individual items from trash <br>
 Export custom elements <br>
 
 
-##Setup
+## Setup
 1. After installing the requirements, run `sudo python manage.py migrate` and `sudo python manage.py makemigrations`.
 2. Next, run the Django webserver using `sudo python manage.py runserver ip_address:port_no`.
 3. **[OPTIONAL]** To create and set up a admin account use `python manage.py createsuperuser`. Enter the username, email-address and password to set it up.
@@ -43,7 +43,7 @@ Export custom elements <br>
 4. Add a static folder - if you do not want to use CDN. In the `settings.py` file under the `expenses_project` folder, add this `STATIC_URL = '/static/'`.
 5. For details on referencing your local llibraries and images, read [this](https://docs.djangoproject.com/en/1.10/intro/tutorial06).
 
-##General directory Structure:
+## General directory Structure:
 
 
 django_expenses_app (main folder)<br>
